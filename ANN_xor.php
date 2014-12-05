@@ -1,7 +1,6 @@
 <?php
 
 require_once 'ANN/Loader.php';
-
 use ANN\Network;
 use ANN\Values;
 use ANN\NetworkGraph;
@@ -11,20 +10,20 @@ use ANN\NetworkGraph;
  *
  * @author frasiek
  */
-class ANN_or {
+class ANN_xor {
 
     protected $network;
 
-    const NETWORK_PATH = "./networks/or.dat";
-    const NETWORK_VALUES_PATH = "./networks/values_or.dat";
-    const NETWORK_IMAGE = "./networks/or.png";
+    const NETWORK_PATH = "./networks/xor.dat";
+    const NETWORK_VALUES_PATH = "./networks/values_xor.dat";
+    const NETWORK_IMAGE = "./networks/xor.png";
 
     function __construct() {
         $this->createOrLoadNetwork();
     }
     
     public function getName(){
-        return "OR";
+        return "XOR";
     }
 
     protected function createOrLoadNetwork() {
@@ -36,10 +35,10 @@ class ANN_or {
             $values = new Values();
 
             $values->train()
-                    ->input(0, 0)->output(0)
-                    ->input(0, 1)->output(1)
-                    ->input(1, 0)->output(1)
-                    ->input(1, 1)->output(1);
+                    ->input(0,0)->output(0)
+                    ->input(0,1)->output(1)
+                    ->input(1,0)->output(1)
+                    ->input(1,1)->output(0);
 
             $values->saveToFile(self::NETWORK_VALUES_PATH);
         }
@@ -81,5 +80,4 @@ class ANN_or {
     public function getOutputs(){
         return $this->network->getOutputs();
     }
-
 }

@@ -1,7 +1,6 @@
 <?php
 
 require_once 'ANN/Loader.php';
-require_once 'ANN_or.php';
 use ANN\Network;
 use ANN\Values;
 use ANN\NetworkGraph;
@@ -11,7 +10,7 @@ use ANN\NetworkGraph;
  *
  * @author frasiek
  */
-class ANN_and extends ANN_or{
+class ANN_and {
 
     protected $network;
 
@@ -19,6 +18,9 @@ class ANN_and extends ANN_or{
     const NETWORK_VALUES_PATH = "./networks/values_and.dat";
     const NETWORK_IMAGE = "./networks/and.png";
 
+    function __construct() {
+        $this->createOrLoadNetwork();
+    }
     
     public function getName(){
         return "AND";
@@ -29,6 +31,7 @@ class ANN_and extends ANN_or{
             $this->network = Network::loadFromFile(self::NETWORK_PATH);
         } catch (Exception $e) {
             $this->network = new Network(1, 2, 1);
+            $this->network->saveToFile(self::NETWORK_PATH);
             $values = new Values();
 
             $values->train()
@@ -39,5 +42,42 @@ class ANN_and extends ANN_or{
 
             $values->saveToFile(self::NETWORK_VALUES_PATH);
         }
+    }
+    
+    public function train(){
+        $objValues = Values::loadFromFile(self::NETWORK_VALUES_PATH);
+        $this->network->setValues($objValues);
+        
+        $this->network->train();
+        $this->network->saveToFile(self::NETWORK_PATH);
+    }
+    
+    public function getImagePath(){
+        if(!file_exists(self::NETWORK_IMAGE)){
+            $objNetworkImage = new NetworkGraph($this->network);
+            $objNetworkImage->saveToFile(self::NETWORK_IMAGE);
+        }
+        return self::NETWORK_IMAGE;
+    }
+    
+    public function isTrainingComplete(){
+        return $this->network->trained();
+    }
+    
+    public function getInfo(){
+        ob_start();
+        $this->network->printNetwork();
+        $return = ob_get_contents();
+        ob_clean();
+        
+        return $return;
+    }
+    
+    public function setValues($objValues){
+        $this->network->setValues($objValues);
+    }
+    
+    public function getOutputs(){
+        return $this->network->getOutputs();
     }
 }
