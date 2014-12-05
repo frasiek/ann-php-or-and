@@ -1,0 +1,200 @@
+<div class="row">
+    <div class="col-md-12">
+        <h3>Network info</h3>
+        <table class="table table-hover table-striped">
+            <tr>
+                <th>
+                    Detected output type
+                </th>
+                <td>
+                    {php:detected_output_type} KiB
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Activation function
+                </th>
+                <td>
+                    {php:activation_function}
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Momentum
+                </th>
+                <td>
+                    {php:momentum}
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Learning rate
+                </th>
+                <td>
+                    {php:learning_rate}
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Network error
+                </th>
+                <td>
+                    {php:network_error}
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Output error tolerance
+                </th>
+                <td>
+                    +/- {php:output_error_tolerance}
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Total loops
+                </th>
+                <td>
+                    {php:total_loops} loops
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Total trainings
+                </th>
+                <td>
+                    {php:total_trainings} trainings
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Total activations
+                </th>
+                <td>
+                    {php:total_activations} activations
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Total activation requests
+                </th>
+                <td>
+                    {php:total_activations_requests} activation requests
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Epoch
+                </th>
+                <td>
+                    {php:epoch} loops
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Training Time
+                </th>
+                <td>
+                    {php:training_time_seconds} seconds = {php:training_time_minutes} minutes
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Loops / second
+                </th>
+                <td>
+                    {php:loops_per_second} loops / second
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Training finished
+                </th>
+                <td>
+                    {php:training_finished}
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Training percentage
+                </th>
+                <td>
+                    {php:trained_percentage} per cent
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        {php:neurons}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>PHP system info</h3>
+        <table class="table table-hover table-striped">
+            <tr>
+                <th>
+                    PHP version
+                </th>
+                <td>
+                    {php:phpversion}
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    PHP interface
+                </th>
+                <td>
+                    {php:phpinterface}
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Max execution time
+                </th>
+                <td>
+                    {php:max_execution_time} [s]
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    CPU limit
+                </th>
+                <td>
+                    {php:cpu_limit} seconds
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Memory peak
+                </th>
+                <td>
+                    {php:memory_peak} KiB
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
