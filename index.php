@@ -1,21 +1,22 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <title>Trening Sieci ANN</title>
 
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" href="main.css"/>
         <script src="bootstrap/js/bootstrap.min.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Informacje</a></li>
-                    <li><a href="/networkAnd.php">And</a></li>
-                    <li><a href="/networkOr.php">Or</a></li>
-                    <li><a href="/networkXor.php">Xor</a></li>
+                    <li class="active"><a href="./">Informacje</a></li>
+                    <li><a href="./networkAnd.php">And</a></li>
+                    <li><a href="./networkOr.php">Or</a></li>
+                    <li><a href="./networkXor.php">Xor</a></li>
                 </ul>
             </div>
         </nav>
@@ -65,10 +66,11 @@
                             </li>
                         </ul>
                         <p>
-                            Następnie możemy zapisywać wewnętrzny stan sieci do pliku <pre>$network->saveToFile($netPath);</pre>
+                            Następnie możemy zapisywać wewnętrzny stan sieci do pliku <code>$network->saveToFile($netPath);</code>
                         </p>
                         <p>
                             Taką samą procedurę wykonujemy z wartościami uczącymi
+                        </p>
                         <pre>
 $values = new Values();
 $values->train()
@@ -101,5 +103,6 @@ $result = $network->getOutputs();
                 </div>
             </div>
         </div>
+        <br/>
     </body>
 </html>

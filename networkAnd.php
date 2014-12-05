@@ -26,19 +26,19 @@ if (!$network->isTrainingComplete()) {
         <meta charset="UTF-8">
         <title>Trening Sieci <?php echo $network->getName(); ?></title>
 
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" href="main.css"/>
         <script src="bootstrap/js/bootstrap.min.js"></script>
     </head>
     <body>
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li><a href="/">Informacje</a></li>
-                    <li class="active"><a href="/networkAnd.php">And</a></li>
-                    <li><a href="/networkOr.php">Or</a></li>
-                    <li><a href="/networkXor.php">Xor</a></li>
+                    <li><a href="./">Informacje</a></li>
+                    <li class="active"><a href="./networkAnd.php">And</a></li>
+                    <li><a href="./networkOr.php">Or</a></li>
+                    <li><a href="./networkXor.php">Xor</a></li>
                 </ul>
             </div>
         </nav>
@@ -52,7 +52,7 @@ if (!$network->isTrainingComplete()) {
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <img src="<?php echo $network->getImagePath(); ?>"/>
+                    <img src="<?php echo $network->getImagePath(); ?>" alt="schemat sieci"/>
                 </div>
             </div>
             <div class="row">
