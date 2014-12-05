@@ -32,7 +32,17 @@ if (!$network->isTrainingComplete()) {
         <script src="bootstrap/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Informacje</a></li>
+                    <li class="active"><a href="/networkAnd.php">And</a></li>
+                    <li><a href="/networkOr.php">Or</a></li>
+                    <li><a href="/networkXor.php">Xor</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container main">
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h1>

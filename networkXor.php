@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <?php
 require_once 'ANN_xor.php';
-//error_reporting(E_ALL);
-//ini_set("display_errors", 1);
-//ini_set("display_startup_errors", 1);
+error_reporting(false);
+ini_set("display_errors", 0);
+ini_set("display_startup_errors", 0);
 $network = new ANN_xor();
 $result = "?";
 if (!$network->isTrainingComplete()) {
@@ -32,7 +32,17 @@ if (!$network->isTrainingComplete()) {
         <script src="bootstrap/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Informacje</a></li>
+                    <li><a href="/networkAnd.php">And</a></li>
+                    <li><a href="/networkOr.php">Or</a></li>
+                    <li class="active"><a href="/networkXor.php">Xor</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container main">
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h1>
