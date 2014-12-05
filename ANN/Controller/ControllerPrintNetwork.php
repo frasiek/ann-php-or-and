@@ -164,7 +164,7 @@ class ControllerPrintNetwork extends Controller
 		
 		$intCountInputs = $arrNetworkInfo['network']['intCountInputs'];
 		
-		$strNeuron = '<h1>Inputs</h1>';
+		$strNeuron = '<h4>Inputs</h4>';
 		
 		$strNeuron .= $intCountInputs; 
 		
@@ -184,7 +184,7 @@ class ControllerPrintNetwork extends Controller
 				
 			foreach($arrNeurons as $objNeuron)
 			{
-				$strNeuron = '<h1>Neuron</h1>';
+				$strNeuron = '<h4>Neuron</h4>';
 				
 				$strNeuron .= $objNeuron->getDelta();
 							
@@ -208,7 +208,7 @@ class ControllerPrintNetwork extends Controller
 		
 		foreach($arrOutputNeurons as $objNeuron)
 		{
-			$strNeuron = '<h1>Output</h1>';
+			$strNeuron = '<h4>Output</h4>';
 			
 			$strNeuron .= $objNeuron->getDelta();
 			

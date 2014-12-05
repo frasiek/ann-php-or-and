@@ -256,6 +256,10 @@ class Network extends Filesystem implements InterfaceLoadable
 	  
 	  $this->setMaxExecutionTime();
 	}
+        
+        public function trained(){
+            return (bool)$this->boolTrained;
+        }
 		
 	/**
 	 * @param array $arrInputs
